@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rethinking Brainly's Trial Model – Dominika Kula-Jurczyńska</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-theme="brainly-rt">
+
+<header class="topnav">
+  <div class="wrap" style="max-width:1080px;">
+    <a class="back-link" href="../index.html#projects">← Back to all work</a>
+    <nav><a href="../index.html#contact">Contact</a></nav>
+  </div>
+</header>
+
+<section class="cs-hero">
+  <div class="wrap">
+    <span class="tag">Brainly · Web &amp; Mobile Web</span>
+    <h1>Designing a new monetization model to increase conversion</h1>
+    <p class="subtitle">Delivering a complex, cross-team project around a new reverse trial model, and an honest look at what didn't go well.</p>
+
+    <div class="meta-row">
+      <div><span class="k">My role</span><span class="v">Senior Product Designer<br>Monetization team</span></div>
+      <div><span class="k">Team</span><span class="v">UI designer, copywriter</span></div>
+      <div><span class="k">Company</span><span class="v">Brainly (B2C EdTech)</span></div>
+      <div><span class="k">Year</span><span class="v">2023</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="wrap">
+    <h2>Background</h2>
+    <p>Brainly is a global B2C EdTech platform where over 350 million students get homework help from peers, tutors, and subject experts, running on a freemium model with a free, ad-supported tier and a paid Premium subscription. We'd already delivered a strong conversion win by rethinking how we communicated Premium's value (see <a href="brainly.html">the first Brainly case study</a>). The next strategic decision was to test an entirely different monetization model, to see whether changing the underlying strategy could boost conversions further.</p>
+    <p>In Product-Led Growth, there are two common ways to let people try a product for free: freemium, where a limited free tier stays available forever, and free trial, where users get full access to the premium offering for a short period before going back to the free experience or upgrading to Premium (the monetization model Brainly used at the time). There's a third, less common approach called reverse trial, where newly registered users are automatically given full paid-tier access for a limited time so they can fully experience the product's value before making a purchase decision, after which they either drop back to a limited free experience or pay to keep what they had.</p>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="wrap">
+    <h2>The problem</h2>
+    <p>Users were largely unaware of what Premium actually offered and didn't understand the core value of paying for it. Only a small number of Brainly users were monetized at all, while retention and engagement in the paid product were low, and churn and trial cancellations were quite high.</p>
+    <p><strong>Hypothesis:</strong> we believed that a freshly registered user who could explore paid features immediately after signing up and experience their value, rather than hitting paywalls along the way, would convert and retain better than under our existing model.</p>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="wrap">
+    <h2>My contribution</h2>
+    <p>This was a major strategic initiative for the company, touching Brainly's entire monetization model rather than a single feature. As the leading designer on the project, working alongside a UI designer, I was the main point of contact across product, engineering, and leadership, driving alignment and keeping the conversation moving in the right direction throughout.</p>
+    <p>I owned end-to-end user research (usability testing, a user survey, and Hotjar session recording analysis) and facilitated the ideation workshops that helped steer the project toward the direction we ultimately took. I designed every user flow, worked closely with our copywriter to rethink how we communicated the new model, and built the prototypes that brought it all to life.</p>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="wrap">
+    <h2>Research &amp; insights</h2>
+    <p>I grounded the project in desk research before touching any screens, mapping out how the major PLG models (usage-based billing, trial, free trial, freemium, and reverse trial) actually work, where each tends to succeed or fail, and how big players' products (Airtable, Loom, Zapier, Spotify...) approach that trade-off.</p>
+
+    <img class="case-img" src="../assets/img/brainly-rt-research.jpg" alt="Research board comparing PLG models – usage-based, trial, free trial, freemium, and reverse trial – with a flow diagram modelling reverse trial conversion paths">
+    <p class="case-img-caption">Comparing PLG models, and modelling how a reverse trial would actually flow for Brainly's users.</p>
+
+    <p>Alongside that, I ran a competitive analysis of monetization flows in comparable products, from registration through trial expiration, looking at what worked, the strongest parts of those flows, and where the pain points were.</p>
+
+    <div class="case-img-row equal-height">
+      <figure class="case-img-col">
+        <img src="../assets/img/brainly-rt-competitor-workspace.png" alt="Annotated Airtable workspace screen showing trial status, upgrade prompts, and plan comparison">
+      </figure>
+      <figure class="case-img-col">
+        <img src="../assets/img/brainly-rt-competitor-billing.png" alt="Annotated Airtable referrals, billing, and card entry flow">
+      </figure>
+    </div>
+    <p class="case-img-caption">Benchmarking the competition: monetisation models and main flows mapped screen by screen, strengths and weak points called out.</p>
+
+    <p>To understand our own users directly, I combined usability testing, a targeted survey, and an analysis of Hotjar session recordings. The survey told a clear story on its own: of 294 respondents, 51.7% said the price was too high relative to the value they saw. Beyond the obvious calls for a lower price or free access, the more interesting pattern was that users wanted more time to actually experience the product's value, and more value itself (more answers, better answers, more benefits overall), before deciding whether it was worth paying for.</p>
+
+    <div class="case-img-row equal-height">
+      <figure class="case-img-col">
+        <img src="../assets/img/brainly-rt-survey-blocker.png" alt="Survey chart: 51.7% of respondents said price was the main reason they wouldn't buy a subscription">
+      </figure>
+      <figure class="case-img-col">
+        <img src="../assets/img/brainly-rt-survey-convince.png" alt="Survey chart: lower price was the top open-ended answer for what would convince respondents to subscribe">
+      </figure>
+    </div>
+    <p class="case-img-caption">Survey responses.</p>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="wrap">
+    <h2>Design process &amp; iterations</h2>
+    <p>With the research in hand, I ran the project through a structured discovery process based on the double diamond method: setting the goal and metrics, diverging to generate a wide pool of ideas, then converging in stages, prioritizing the most impactful ideas, defining them more precisely, mapping the flow and the big picture, and finally scoping and planning the actual work.</p>
+
+    <div class="discovery-stepper">
+      <div class="discovery-steps">
+        <button type="button" class="discovery-step is-active" data-step="1"><span class="discovery-step-num">1</span><span>Set up the goal &amp; metrics</span></button>
+        <button type="button" class="discovery-step" data-step="2"><span class="discovery-step-num">2</span><span>Diverge: generate ideas</span></button>
+        <button type="button" class="discovery-step" data-step="3"><span class="discovery-step-num">3</span><span>Converge: prioritize</span></button>
+        <button type="button" class="discovery-step" data-step="4"><span class="discovery-step-num">4</span><span>Converge: define</span></button>
+        <button type="button" class="discovery-step" data-step="5"><span class="discovery-step-num">5</span><span>Map the flow</span></button>
+        <button type="button" class="discovery-step" data-step="6"><span class="discovery-step-num">6</span><span>Scope &amp; plan the work</span></button>
+      </div>
+      <div class="discovery-visual">
+        <img class="discovery-visual-img is-active" data-step="1" src="../assets/img/brainly-rt-discovery-step1-goal.jpg" alt="Workshop board setting the business goal, SMART goals, and key metrics for the project">
+        <img class="discovery-visual-img" data-step="2" src="../assets/img/brainly-rt-discovery-step2-diverge.jpg" alt="Impact mapping boards used to diverge and generate a wide pool of ideas">
+        <img class="discovery-visual-img" data-step="3" src="../assets/img/brainly-rt-discovery-step3-converge-prioritize.jpg" alt="Idea prioritization boards, including a satisfaction versus effort matrix and MVP candidates">
+        <img class="discovery-visual-img" data-step="4" src="../assets/img/brainly-rt-discovery-step4-converge-define.jpg" alt="Four defined user flow groups mapped out in detail">
+        <img class="discovery-visual-img" data-step="5" src="../assets/img/brainly-rt-discovery-step5-converge-flow.jpg" alt="Full flow diagram mapping the unregistered user through registration and the reverse trial">
+        <img class="discovery-visual-img" data-step="6" src="../assets/img/brainly-rt-discovery-step6-story-map.png" alt="User story mapping board covering the unregistered user, after registration reverse trial, and after reverse trial phases, organized by release">
+        <span class="zoom-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+      </div>
+      <p class="case-img-caption discovery-caption">
+        <span class="is-active" data-step="1">Workshop 1: setting the business goal, SMART goals, and the key metrics we'd use to measure success.</span>
+        <span data-step="2">Diverging: impact mapping to generate a wide pool of possible ideas.</span>
+        <span data-step="3">Converging: prioritizing ideas by effort and impact, and shortlisting MVP candidates.</span>
+        <span data-step="4">Converging: defining the most impactful ideas into four distinct user flow groups.</span>
+        <span data-step="5">Converging: mapping the full flow, from an unregistered user through registration and the reverse trial.</span>
+        <span data-step="6">Converging: scoping the work through user story mapping.</span>
+      </p>
+    </div>
+
+    <p>The core design decision was the flow itself. I mapped our existing flow, which asked for payment info upfront before users had really experienced the product, against a new reverse trial flow, where users register, land straight in a fully-unlocked trial with a welcome modal and reminder emails, and only hit a real decision point once the trial itself ends.</p>
+
+    <div class="case-img-row">
+      <figure class="case-img-col">
+        <img src="../assets/img/brainly-rt-flow-v2.png" alt="Side-by-side comparison of the current flow, which asks for payment info upfront, versus the new reverse trial flow, which delays any payment decision until the trial ends">
+      </figure>
+    </div>
+    <p class="case-img-caption">Current flow vs. the reverse trial flow – the key shift was delaying any payment decision until users had already experienced the full product.</p>
+
+    <div class="case-img-row">
+      <figure class="case-img-col">
+        <img src="../assets/img/brainly-rt-flow-detail.png" alt="Detailed reverse trial flow, from trial start through welcome emails, onboarding modals, free answer access, reminders, trial end, and re-entry to Brainly">
+      </figure>
+    </div>
+    <p class="case-img-caption">The reverse trial flow mapped in detail, every screen and touchpoint from trial start to re-entry.</p>
+
+    <p>Working with a UI designer and copywriter, I turned that flow into complete mockups and interactive prototypes in Figma, covering onboarding, navigation, communication, and every entry point a user could hit along the user journey.</p>
+
+    <p>The designs went through five full iterations, each tested with usability testing before release and then validated with A/B tests on production. The data from every round shaped the next iteration, so each version was a direct response to what we'd learned rather than a gut feeling. The screens and designs you see below are just a small snippet of everything we designed and tested, since there was simply too much to fit into one short case study.</p>
+
+    <div class="figma-showcase">
+      <div class="figma-stage">
+        <span class="figma-stage-label">Onboarding · Step 1</span>
+        <div class="figma-frame">
+          <img class="figma-desktop" src="../assets/img/brainly-rt-figma-onboarding1-desktop.png" alt="Onboarding step 1, desktop screen">
+          <img class="figma-mobile" src="../assets/img/brainly-rt-figma-onboarding1-mobile.png" alt="Onboarding step 1, mobile screen">
+          <span class="zoom-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+        </div>
+      </div>
+      <div class="figma-stage">
+        <span class="figma-stage-label">Onboarding · Step 2</span>
+        <div class="figma-frame">
+          <img class="figma-desktop" src="../assets/img/brainly-rt-figma-onboarding2-desktop.png" alt="Onboarding step 2, desktop screen">
+          <img class="figma-mobile" src="../assets/img/brainly-rt-figma-onboarding2-mobile.png" alt="Onboarding step 2, mobile screen">
+          <span class="zoom-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+        </div>
+      </div>
+      <div class="figma-stage">
+        <span class="figma-stage-label">Reverse trial · Day 1</span>
+        <div class="figma-frame">
+          <img class="figma-desktop" src="../assets/img/brainly-rt-figma-day1-v2-desktop.png" alt="Reverse trial day 1, desktop screen">
+          <img class="figma-mobile" src="../assets/img/brainly-rt-figma-day1-v2-mobile.png" alt="Reverse trial day 1, mobile screen">
+          <span class="zoom-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+        </div>
+      </div>
+      <div class="figma-stage">
+        <span class="figma-stage-label">Reverse trial · Last day</span>
+        <div class="figma-frame">
+          <img class="figma-desktop" src="../assets/img/brainly-rt-figma-lastday-desktop.png" alt="Reverse trial last day, desktop screen">
+          <img class="figma-mobile" src="../assets/img/brainly-rt-figma-lastday-mobile.png" alt="Reverse trial last day, mobile screen">
+          <span class="zoom-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+        </div>
+      </div>
+    </div>
+    <p class="case-img-caption">A few of the key screens across the trial experience, desktop and mobile, spanning onboarding through the last day of the trial.</p>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="wrap">
+    <h2>Results</h2>
+    <p>The reverse trial launched as an A/B test against the existing model. The results were genuinely mixed, and I think that's the most useful part of this case study to share honestly.</p>
+    <div class="impact-stats">
+      <div class="stat good"><div class="num">−56%</div><div class="label">Refund rate for the reverse trial variant</div></div>
+      <div class="stat good"><div class="num">+5%</div><div class="label">Total answers read by users in the reverse trial variant</div></div>
+      <div class="stat bad"><div class="num">−50%</div><div class="label">Net revenue after refunds, vs. the existing model</div></div>
+    </div>
+    <p>Overall, reverse trials underperformed the existing flow on net revenue, even though they cut refunds sharply and got users reading more answers along the way. At the same time, we were testing a stricter metering approach, and it consistently performed better on revenue. It confirmed that the product itself wasn't delivering enough value yet, not the trial model. In the end, we dropped the reverse trial approach, shifted focus to stricter metering, and started investing more in our core product features, since that's where the real problem was.</p>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="wrap">
+    <h2>What I learned</h2>
+    <ul>
+      <li>Leading a project this complex, wide-reaching, and strategically important, with so many teams and people involved, taught me a lot about what it really takes to lead at that scale.</li>
+      <li>Running the whole process end to end sharpened my double diamond skills, especially scoping and converging once the pool of ideas gets big.</li>
+      <li>Even an idea that feels obviously right still needs to be validated with real data, since even the best ideas can end up hurting the business.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cs-nav-footer">
+  <div class="wrap">
+    <a class="cs-nav-back" href="../index.html#projects">← Back to all work</a>
+    <a class="cs-nav-next" href="sympatia-navigation.html">Next case study: Redesigning Sympatia's mobile app →</a>
+  </div>
+</div>
+
+<script src="../assets/discovery-stepper.js"></script>
+<script src="../assets/lightbox.js"></script>
+</body>
+</html>
