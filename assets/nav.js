@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Local-only unlock for the NDA-protected Zendesk card. On the deployed
+  // site this check fails and the card stays exactly as-is (locked, not
+  // clickable). Opened locally (file:// or a local server), it unlocks so
+  // the case study can be demoed live without ever being pushed to git.
+  var isLocal = window.location.protocol === 'file:' ||
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1';
+  var lockedCard = document.querySelector('.card.locked[data-local-href]');
+  if (isLocal && lockedCard) {
+    lockedCard.classList.remove('locked');
+    lockedCard.style.cursor = 'pointer';
+    lockedCard.addEventListener('click', function (e) {
+      if (e.target.closest('.nda-cta')) return;
+      window.location.href = lockedCard.getAttribute('data-local-href');
+    });
+  }
+
   var header = document.querySelector('.topnav');
   var toggle = document.querySelector('.nav-toggle');
   var nav = header ? header.querySelector('nav') : null;

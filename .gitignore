@@ -1,1 +1,6 @@
 .DS_Store
+
+# Private, NDA-protected case study — kept local only, never pushed/deployed
+# (zendesk-logo.svg on the homepage card is NOT covered by this and stays public)
+case-studies/zendesk.html
+assets/img/zendesk-cs-*

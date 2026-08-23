@@ -577,6 +577,24 @@ footer.contact p {
   .case-img-row { flex-direction: column; }
 }
 
+/* No-frame variant: for transparent-background mockups that already carry
+   their own drop shadow, so they sit directly on the page instead of
+   inside a bordered/rounded card. */
+.case-img-row.no-frame .case-img-col img {
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+.case-img-row.no-frame .zoomable { border-radius: 0; }
+.case-img-row.no-frame { gap: 0; }
+.case-img-row.no-frame .case-img-col + .case-img-col { margin-left: -32px; }
+@media (max-width: 760px) {
+  .case-img-row.no-frame .case-img-col + .case-img-col {
+    margin-left: 0;
+    margin-top: -32px;
+  }
+}
+
 /* Figma showcase: four stages in a 2x2 grid, each pairing a desktop screen
    with its mobile counterpart tucked over the bottom corner */
 .figma-showcase {
@@ -1077,6 +1095,15 @@ footer.contact p {
   transition: opacity .25s ease;
 }
 .lightbox-overlay.is-open { opacity: 1; visibility: visible; }
+.lightbox-frame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: none;
+}
 .lightbox-overlay img {
   max-width: 100%;
   max-height: 100%;
@@ -1084,8 +1111,14 @@ footer.contact p {
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
   transform: scale(0.96);
   transition: transform .25s ease;
+  cursor: zoom-in;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 .lightbox-overlay.is-open img { transform: scale(1); }
+.lightbox-overlay img.is-panning { transition: none; }
+.lightbox-frame.is-zoomed img { cursor: grab; }
+.lightbox-overlay img.is-grabbing { cursor: grabbing; }
 .lightbox-close {
   position: absolute;
   top: 24px;
@@ -1099,9 +1132,51 @@ footer.contact p {
   justify-content: center;
   cursor: pointer;
   transition: background .2s ease;
+  z-index: 2;
 }
 .lightbox-close:hover { background: rgba(255,255,255,0.22); }
 .lightbox-close svg { width: 18px; height: 18px; stroke: #fff; }
+
+.lightbox-zoom-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 999px;
+  padding: 6px;
+  z-index: 2;
+}
+.lightbox-zoom-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.lightbox-zoom-btn:hover { background: rgba(255,255,255,0.24); }
+.lightbox-zoom-btn svg { width: 16px; height: 16px; stroke: #fff; }
+.lightbox-zoom-controls.at-min [data-action="out"],
+.lightbox-zoom-controls.at-max [data-action="in"] {
+  opacity: 0.35;
+  pointer-events: none;
+}
+.lightbox-zoom-pct {
+  min-width: 52px;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
 
 .placeholder-img {
   border: 1.5px dashed #D2CBDF;
@@ -1191,6 +1266,7 @@ body[data-theme="brainly"] { --accent: #362A9E; --accent-tint: #ECE8F9; }
 body[data-theme="brainly-rt"] { --accent: #6A3FA0; --accent-tint: #EFE7F7; }
 body[data-theme="sympatia-nav"] { --accent: #9C4B9E; --accent-tint: #F7E9F6; }
 body[data-theme="sympatia-profile"] { --accent: #A2447F; --accent-tint: #F9E7EF; }
+body[data-theme="zendesk"] { --accent: #4A4458; --accent-tint: #ECEAF0; }
 
 @media (max-width: 760px) {
   .hero-landing { grid-template-columns: 1fr; padding: 50px 28px 50px; gap: 28px; }
